@@ -29,20 +29,20 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     y_prob = knn.predict_proba(X_test)
 
     #plot das métricas
-    fig, ax = plt.subplots()
+    fig, (ax1, ax2, ax3) = plt.subplots()
 
     left, width = .25, .5
     bottom, height = .25, .5
     right = left + width
     top = bottom + height
 
-    skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True, title= f"Matriz de confusão KNN {i}", ax=ax)
-    skplt.metrics.plot_roc(y_test, y_prob, ax=ax)
+    skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True, title= f"Matriz de confusão KNN {i}", ax=ax1)
+    skplt.metrics.plot_roc(y_test, y_prob, ax=ax2)
 
-    ax.text(0.5 * (left + right), bottom, "Texto de teste",
+    ax3.text(0.5 * (left + right), bottom, "Texto de teste",
         horizontalalignment='center',
         verticalalignment='center',
-        transform=ax.transAxes)
+        transform=ax3.transAxes)
 
 plt.show()
 
