@@ -1,6 +1,7 @@
 from sklearn import datasets
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
@@ -28,10 +29,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratif
 
 
 #declare the model and train it with the data
-knn = KNeighborsClassifier(n_neighbors= 5)
+knn = KNeighborsClassifier(n_neighbors= 11)
 knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
 y_score = knn.predict_proba(X_test)
+
+knn_cv = KNeighborsClassifier(n_neighbors=11)
+cv_scores = cross_val_score(knn_cv, X, y, cv=10)
+print('cv_scores:{}\n' .format(np.mean(cv_scores)))
 
 #find the confusion matrix of the model and show the main results,(Precision, Recall, F1-Score and total accurancy)
 confusion_matrix = metrics.confusion_matrix(y_test, y_pred)#puts the matrix in the variable to display in the next section
