@@ -36,6 +36,7 @@ y_score = knn.predict_proba(X_test)
 
 knn_cv = KNeighborsClassifier(n_neighbors=11)
 cv_scores = cross_val_score(knn_cv, X, y, cv=10)
+print(cv_scores, "\n")
 print('cv_scores:{}\n' .format(np.mean(cv_scores)))
 
 #find the confusion matrix of the model and show the main results,(Precision, Recall, F1-Score and total accurancy)
