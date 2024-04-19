@@ -21,15 +21,18 @@ dataFrame.head()
 X, y = iris.data, iris.target
 class_names = iris.target_names
 
-random_state = np.random.RandomState(0)
+#Adding "noisy" to the dataset, to visualize better the ROC curve and Confusion Matrix
+'''random_state = np.random.RandomState(0)
 n_samples, n_features = X.shape
 n_classes = len(np.unique(y))
-X = np.concatenate([X, random_state.randn(n_samples, 50 * n_features)], axis=1)
+X = np.concatenate([X, random_state.randn(n_samples, 50 * n_features)], axis=1)'''
+
+#Spliting the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify=y, random_state=0)
 
 
 #declare the model and train it with the data
-knn = KNeighborsClassifier(n_neighbors= 11)
+knn = KNeighborsClassifier(n_neighbors= 11, metric = 'euclidean')
 knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
 y_score = knn.predict_proba(X_test)
