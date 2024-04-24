@@ -1,6 +1,6 @@
 from sklearn.datasets import load_iris
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import KFold
 import pandas as pd
 import numpy as np
@@ -29,8 +29,14 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     y_train, y_test = y[train_index], y[test_index]
     
     knn.fit(X_train, y_train)  # Treinando o modelo
-    y_pred = knn.predict(X_test)
-    y_prob = knn.predict_proba(X_test)
+    y_pred = knn.predict(X_test)  # Prevendo rotulos de dados de teste
+    y_prob = knn.predict_proba(X_test)  # Prevendo probabilidade de rotulos de dados de teste
+
+    #Calculando métricas de avaliação
+    accuracy = accuracy_score(y_test, y_pred)
+    precision_versicolor = precision_score(y_test, y_pred, labels=[1], average=None)[0]
+    recall_versicolor = recall_score(y_test, y_pred, labels=[1], average=None)[0]
+    f1_versicolor = f1_score(y_test, y_pred, labels=[1], average=None)[0]
 
     #Adicionando rótulos verdadeiros e probabilidades previstas
     true_labels.extend(y_test)
@@ -46,10 +52,12 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
 
     skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True, title= f"Matriz de confusão KNN {i}", ax=ax1)
 
-    ax2.text(0.5 * (left + right), bottom, "Texto de teste",
-        horizontalalignment='center',
-        verticalalignment='center',
-        transform=ax2.transAxes)
+    ax2.text(0.1, 0.9, f"Acurácia: {accuracy:.2f}", fontsize=12, ha='left', transform=ax2.transAxes)
+    ax2.text(0.1, 0.8, f"Precisão Versicolor: {precision_versicolor:.2f}", fontsize=12, ha='left', transform=ax2.transAxes)
+    ax2.text(0.1, 0.7, f"Recall Versicolor: {recall_versicolor:.2f}", fontsize=12, ha='left', transform=ax2.transAxes)
+    ax2.text(0.1, 0.6, f"F1-score Versicolor: {f1_versicolor:.2f}", fontsize=12, ha='left', transform=ax2.transAxes)
+
+    ax2.axis('off')
 
 skplt.metrics.plot_roc(true_labels, predicted_probs)
 
