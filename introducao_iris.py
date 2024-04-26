@@ -63,7 +63,8 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     predicted_probs_dtc.extend(y_prob_dtc)
 
     #Plot
-    fig, axes = plt.subplots(2, 3)
+    fig, axes = plt.subplots(2, 2)
+    fig, ax1 = plt.subplots()
 
     #Matriz de confusão KNN
     skplt.metrics.plot_confusion_matrix(y_test, y_pred_knn, normalize=True, title= f"Matriz de confusão KNN {i}", ax=axes[0, 0])
@@ -77,7 +78,7 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     axes[0, 1].text(0.1, 0.7, f"Recall Versicolor: {knn_recall_versicolor:.2f}", fontsize=12, ha='left', transform=axes[0, 1].transAxes)
     axes[0, 1].text(0.1, 0.6, f"F1-score Versicolor: {knn_f1_versicolor:.2f}", fontsize=12, ha='left', transform=axes[0, 1].transAxes)
 
-    axes[0, 1].axis('off')
+    axes[0, 1].set_axis_off()
     axes[0, 1].set_title('Métricas de avaliação KNN')
 
     #Métricas de avaliação DTC
@@ -86,7 +87,7 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     axes[1, 1].text(0.1, 0.7, f"Recall Versicolor: {dtc_recall_versicolor:.2f}", fontsize=12, ha='left', transform=axes[1, 1].transAxes)
     axes[1, 1].text(0.1, 0.6, f"F1-score Versicolor: {dtc_f1_versicolor:.2f}", fontsize=12, ha='left', transform=axes[1, 1].transAxes)
 
-    axes[1, 1].axis('off')
+    axes[1, 1].set_axis_off()
     axes[1, 1].set_title('Métricas de avaliação Arvore de decisão')
 
     #Visualização
@@ -96,10 +97,9 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
     steps=[("scaler", StandardScaler()), ("knn", KNeighborsClassifier(n_neighbors=11))]
     )
     
-    
-
     #DTC
-    plot_tree(dtc, ax=[1, 2])
+    plot_tree(dtc, ax=ax1, filled=True, fontsize=10)
+    ax1.set_title(f'Arvore de decisão {i}')
 
 skplt.metrics.plot_roc(true_labels, predicted_probs_knn, title="Curva ROC KNN")
 skplt.metrics.plot_roc(true_labels, predicted_probs_dtc, title="Curva ROC Arvore de decisão")
