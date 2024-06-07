@@ -39,7 +39,7 @@ training_inputs = np.array([
     [1, 1]
 ])
 
-labels = np.array([1, 1, 1, 0])
+labels = np.array([0, 0, 0, 1])
 
 # Inicializando o perceptron
 perceptron = Perceptron(input_size=2)
@@ -92,7 +92,7 @@ def plot_perceptron(weights, z, ax1, ax4, i, p):
     ax1.text(0.70 - ajuste_x, 0.50, f'{somatorio:.1f}', fontsize= font)
 
     # vies
-    ax1.text(0.78 - ajuste_x, 0.58, f'+ {weights[0]}', fontsize= font, color='#ffa500')
+    ax1.text(0.78 - ajuste_x, 0.58, f'+ {weights[0]:.1f}', fontsize= font, color='#ffa500')
     ax1.text(0.78 - ajuste_x, 0.71, "vies", fontsize= 15, color='k')
 
     ax1.arrow(0.80 - ajuste_x, 0.53, 0.07, 0, head_width=0.02, head_length=0.03)
@@ -130,10 +130,13 @@ def plot_perceptron(weights, z, ax1, ax4, i, p):
     ax4.set_axis_off()
     ax4.set_xlim(0, 1)
     ax4.set_ylim(0, 1)
+    ax4.text(0.46, 0.82, 'ŷ', fontsize = 20)
 
-    ax4.text(0.35, 0.55 , f'$ẃ_i = w_i + 0,1(y - ŷ)x_i $', fontsize=font, color='red')
-    ax4.text(0.35, 0.35 , f'$ẃ_1 = {weights[1]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][0]} $', fontsize=font, color='k')
-    ax4.text(0.35, 0.15 , f'$ẃ_2 = {weights[2]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][1]} $', fontsize=font, color='k')
+    ax4.text(0.35, 0.65 , f'$ẃ_i = w_i + 0,1(y - ŷ)x_i $', fontsize=17, color='red')
+    ax4.text(0.35, 0.50 , f'$ẃ_1 = {weights[1]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][0]} $', fontsize=17, color='k')
+    ax4.text(0.35, 0.35 , f'$ẃ_2 = {weights[2]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][1]} $', fontsize=17, color='k')
+    ax4.text(0.35, 0.15 , f'$b´_i = b_i + 0,1(y - ŷ) $', fontsize=17, color='red')
+    ax4.text(0.35, 0.0 , f'$b´_i = {weights[0]} + 0,1({labels[input_i]} - {p}) $', fontsize=17, color='k')
     
 
 def plot_decision_boundary(weights, ax, i):
@@ -157,7 +160,6 @@ def plot_step_function(z, p, ax, i):
     ax.clear()
     ax.set_xlim(-1.1, 1.1)
     ax.set_ylim(-0.1, 1.1)
-    ax.set_ylabel('ŷ', labelpad = 4, fontsize = 20)
     x_vals = np.linspace(-1.1, 1.1, 400)
     y_vals = step_function(x_vals)
     ax.plot(x_vals, y_vals, label='Função Degrau')
