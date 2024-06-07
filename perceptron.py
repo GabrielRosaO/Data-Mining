@@ -136,7 +136,7 @@ def plot_perceptron(weights, z, ax1, ax4, i, p):
     ax4.text(0.35, 0.50 , f'$ẃ_1 = {weights[1]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][0]} $', fontsize=17, color='k')
     ax4.text(0.35, 0.35 , f'$ẃ_2 = {weights[2]} + 0,1({labels[input_i]} - {p}){training_inputs[input_i][1]} $', fontsize=17, color='k')
     ax4.text(0.35, 0.15 , f'$b´_i = b_i + 0,1(y - ŷ) $', fontsize=17, color='red')
-    ax4.text(0.35, 0.0 , f'$b´_i = {weights[0]} + 0,1({labels[input_i]} - {p}) $', fontsize=17, color='k')
+    ax4.text(0.35, 0.0 , f'$b´ = {weights[0]} + 0,1({labels[input_i]} - {p}) $', fontsize=17, color='k')
     
 
 def plot_decision_boundary(weights, ax, i):
