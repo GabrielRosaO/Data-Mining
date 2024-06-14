@@ -7,6 +7,17 @@ Ele contém as apresentações desenvolvidas em cada tema estudado e os códigos
 * [R](https://www.r-project.org/) - Linguagem Utilizada em alguns modelos estudados
 * [WEKA](https://ml.cms.waikato.ac.nz/weka/index.html) - Software Focado em Machine Learning
 
+### Acesso ao WEKA
+O WEKA é uma paltaforma utilizada no aprendizado de Machine Learning, existe um pequeno tutorial de como acessá-lo na pasta "Apresentações". No link https://ml.cms.waikato.ac.nz/weka/index.html está um tutorial completo de utilização, documentação, requisitos de sistema, etc da ferramenta. 
+Página Inicial do site WEKA:
+
+![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/d313cc26-98f3-4d1c-9026-443d090a5584)
+
+Acessando a aba "Courses" contém um curso em vídeo completo de um dos desenvolvedores do software de como utiliza-lo e uma introdução ao Machine Learning:
+
+![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/1d0ce62d-1d39-4f98-a3a1-0a7aa294fa90)
+
+
 ### Bibliotecas Utilizadas
 **Python**:
 * [Scikit-Learn](https://scikit-learn.org/stable/index.html) - Especifica para Machine Learning
@@ -14,7 +25,8 @@ Ele contém as apresentações desenvolvidas em cada tema estudado e os códigos
 * [MatplotLib](https://matplotlib.org/) - Visualização de dados
 * [Qiskit](https://www.ibm.com/quantum/qiskit) - Biblioteca focada em Simulação Quântica, Manipulação de Qbits, Construção de Circuitos Quântico, etc.
 
-##Utilização do Qiskit
+
+### Utilização do Qiskit
 Essa ferramenta pode ser utilizada de duas maneiras diferentes: Importando a biblioteca Qiskit para dentro da IDE utilizada (Visual Studio, PyCharm, etc) ou através do p´roprio site da IBM QUANTUM: (https://quantum.ibm.com/). Basta acessar o link que é possível construir seus circuitos e codar dentro da própria plataforma.
 ###Tutorial Acesso ao Ambiente
 Nesta imagem está a página inicial do ambiente, em que temos acesso a um Dashboard com as principais notícias, Jobs realizados e acesso a todo o resto da plataforma:
@@ -26,11 +38,7 @@ Ao acessar o menu, nos nove quadradinhos na direita superior é demonstrado trê
 Para introdução, acesse a sessão de Learning que terá cursos gratuitos e espaços de aprendizado introdutórios aos conceitos da computação quântica:
 ![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/3a2918ac-45ff-42fa-9eb9-5a2de1079583)
 
-###Acesso ao WEKA
-O WEKA é uma paltaforma utilizada no aprendizado de Machine Learning, existe um pequeno tutorial de como acessá-lo na pasta "Apresentações". No link https://ml.cms.waikato.ac.nz/weka/index.html está um tutorial completo de utilização, documentação, requisitos de sistema, etc da ferramenta. 
-Página Inicial do site WEKA:
-![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/d313cc26-98f3-4d1c-9026-443d090a5584)
-Acessando a aba "Courses" contém um curso em vídeo completo de um dos desenvolvedores do software de como utiliza-lo e uma introdução ao Machine Learning:
-![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/1d0ce62d-1d39-4f98-a3a1-0a7aa294fa90)
+
+
 
 
