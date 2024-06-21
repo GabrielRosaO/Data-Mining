@@ -3,7 +3,7 @@ Nesse repositório iremos agrupar todo e qualquer projeto desenvolvido pelo grup
 Ele contém as apresentações desenvolvidas em cada tema estudado e os códigos desenvolvidos nessas áreas de pesquisa.
 
 ## Novos Ingressantes do Grupo 
-Para os novos ingressantes, acessem a pasta **Introduções**. Nela contém as apresentações introdutórias aos conteúdos que o grupo está pesquisando, com uma apresentação que explica brevemente o _Machine Learning_ e a ferramenta de acesso do **WEKA**. Há também um código em Python com os conceitos fundamentais do _Machine Learning_ em código. 
+Para os novos ingressantes, acessem a pasta **Introduções**. Nela contém as apresentações introdutórias aos conteúdos que o grupo está pesquisando, com uma apresentação que explica brevemente o _Machine Learning_ e a ferramenta de acesso do **WEKA**. Há também um arquivo (introdução_iris.py) com os conceitos fundamentais do _Machine Learning_ aplicados em código Python. 
 
 ## Linguagens e Ferramentas Utilizadas
 * [Python](https://www.python.org/) - Principal Linguagem utilizada
