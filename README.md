@@ -2,6 +2,9 @@
 Nesse repositório iremos agrupar todo e qualquer projeto desenvolvido pelo grupo QFlex da Universidade Federal de Pelotas. 
 Ele contém as apresentações desenvolvidas em cada tema estudado e os códigos desenvolvidos nessas áreas de pesquisa.
 
+## Novos Ingressantes do Grupo 
+Para os novos ingressantes, acessem a pasta **Introduções**. Nela contém as apresentações introdutórias aos conteúdos que o grupo está pesquisando, com uma apresentação que explica brevemente o _Machine Learning_ e a ferramenta de acesso do **WEKA**. Há também um código em Python com os conceitos fundamentais do _Machine Learning_ em código. 
+
 ## Linguagens e Ferramentas Utilizadas
 * [Python](https://www.python.org/) - Principal Linguagem utilizada
 * [R](https://www.r-project.org/) - Linguagem Utilizada em alguns modelos estudados
