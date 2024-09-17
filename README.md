@@ -31,7 +31,7 @@ Acessando a aba "Courses" contém um curso em vídeo completo de um dos desenvol
 
 ### Utilização do Qiskit
 Essa ferramenta pode ser utilizada de duas maneiras diferentes: Importando a biblioteca Qiskit para dentro da IDE utilizada (Visual Studio, PyCharm, etc) ou através do p´roprio site da IBM QUANTUM: (https://quantum.ibm.com/). Basta acessar o link que é possível construir seus circuitos e codar dentro da própria plataforma.
-###Tutorial Acesso ao Ambiente
+### Tutorial Acesso ao Ambiente
 Nesta imagem está a página inicial do ambiente, em que temos acesso a um Dashboard com as principais notícias, Jobs realizados e acesso a todo o resto da plataforma:
 ![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/581901d8-5462-431f-8a7c-128c846ba760)
 
