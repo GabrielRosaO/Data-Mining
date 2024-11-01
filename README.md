@@ -3,15 +3,20 @@ Nesse repositório iremos agrupar todo e qualquer projeto desenvolvido pelo grup
 Ele contém as apresentações desenvolvidas em cada tema estudado e os códigos desenvolvidos nessas áreas de pesquisa.
 
 ## Novos Ingressantes do Grupo 
-Para os novos ingressantes, acessem a pasta **Introduções**. Nela contém as apresentações introdutórias aos conteúdos que o grupo está pesquisando, com uma apresentação que explica brevemente o _Machine Learning_ e a ferramenta de acesso do **WEKA**. Há também um arquivo (introdução_iris.py) com os conceitos fundamentais do _Machine Learning_ aplicados em código Python. 
+Para os novos ingressantes, cada umas das duas pastas *Quantum* e *Machine Learning* se refere aos conteúdos estudados no grupo.
+
+Pasta **Quantum**: Contém uma apresentação do _Qiskit_, simulador quântico que o grupo utiliza e um código que estuda algoritmos variacionais.
+
+Pasta **Machine Learning**: Contém todos os conteúdos que o grupo estuda na área de aprendizado de máquina. Acessem a pasta _Introdução_Básica_ML_ e o PDF _Livro Machine Learning_ que introduz os conceitos chaves de aprendizado de máquina.
 
 ## Linguagens e Ferramentas Utilizadas
-* [Python](https://www.python.org/) - Principal Linguagem utilizada
+* [Python](https://www.python.org/) - Principal Linguagem utilizada (ML e Quantum)
 * [R](https://www.r-project.org/) - Linguagem Utilizada em alguns modelos estudados
 * [WEKA](https://ml.cms.waikato.ac.nz/weka/index.html) - Software Focado em Machine Learning
+* [KEEL](http://www.keel.es/) - Software Focado em Machine Learning
 
 ### Acesso ao WEKA
-O WEKA é uma paltaforma utilizada no aprendizado de Machine Learning, existe um pequeno tutorial de como acessá-lo na pasta "Apresentações". No link https://ml.cms.waikato.ac.nz/weka/index.html está um tutorial completo de utilização, documentação, requisitos de sistema, etc da ferramenta. 
+O WEKA é uma plataforma utilizada no aprendizado de Machine Learning, existe um pequeno tutorial de como acessá-lo na pasta "Apresentações". No link https://ml.cms.waikato.ac.nz/weka/index.html está um tutorial completo de utilização, documentação, requisitos de sistema, etc da ferramenta. 
 Página Inicial do site WEKA:
 
 ![image](https://github.com/GabrielRosaO/Data-Mining/assets/125213350/d313cc26-98f3-4d1c-9026-443d090a5584)
